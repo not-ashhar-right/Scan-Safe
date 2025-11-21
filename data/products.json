@@ -1,0 +1,34 @@
+[
+  {
+    "id": "prod-1",
+    "name": "SafeScan Demo Product",
+    "sku": "SS-DEMO-001",
+    "canonicalImageUrl": "/uploads/demo-product.png",
+    "batches": [
+      {
+        "id": "batch-1",
+        "name": "Demo Batch 1",
+        "size": 10,
+        "createdAt": 1763679987499
+      }
+    ]
+  },
+  {
+    "id": "prod-907b4a03-766c-4d34-b7fd-bc15edd06d51",
+    "name": "boat headphones",
+    "sku": "INC5584",
+    "batches": []
+  },
+  {
+    "id": "prod-70192cd3-0c80-46b5-961b-8105ea7a01ae",
+    "name": "bag",
+    "sku": "THY-278",
+    "batches": []
+  },
+  {
+    "id": "prod-978705ae-1330-4d88-ad53-a42e0407f866",
+    "name": "pen r",
+    "sku": "uygyuhgyu",
+    "batches": []
+  }
+]
