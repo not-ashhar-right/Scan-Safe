@@ -1,1 +1,86 @@
-[]
+[
+  {
+    "id": "eae32d33-7acc-4fa6-b89f-52021214a51d",
+    "qrId": "af4cc1ae-2f2b-4c10-a2bd-37b037f6fa2f",
+    "role": "manufacturer",
+    "actorId": "67YH",
+    "actorName": "uday",
+    "timestamp": 1763717035343,
+    "location": "us",
+    "isDuplicate": false,
+    "txHash": "MOCK_ee15b64911a29c61"
+  },
+  {
+    "id": "8d73670c-39d8-4ee6-8741-858154c9b85f",
+    "qrId": "af4cc1ae-2f2b-4c10-a2bd-37b037f6fa2f",
+    "role": "distributor",
+    "actorId": "HU&",
+    "actorName": "shar",
+    "timestamp": 1763717194867,
+    "location": "India",
+    "isDuplicate": false,
+    "txHash": "MOCK_7e4db178dd4b2fd5"
+  },
+  {
+    "id": "bff80bab-e442-4840-a0bc-d681d33b588e",
+    "qrId": "af4cc1ae-2f2b-4c10-a2bd-37b037f6fa2f",
+    "role": "retailer",
+    "actorId": "JOVGVg7",
+    "actorName": "adh",
+    "timestamp": 1763717217857,
+    "location": "bangalore",
+    "isDuplicate": false,
+    "txHash": "MOCK_d6781ee381e55067"
+  },
+  {
+    "id": "cbd782f1-e744-4bc1-b7e4-c2031631d800",
+    "qrId": "af4cc1ae-2f2b-4c10-a2bd-37b037f6fa2f",
+    "role": "customer",
+    "actorId": "vig@gmail.com",
+    "actorName": "Vignesh",
+    "timestamp": 1763717252808,
+    "isDuplicate": false,
+    "txHash": "MOCK_eb9853bd8eca1670"
+  },
+  {
+    "id": "38d754f6-dbec-47db-bede-4822a454dcf6",
+    "qrId": "af4cc1ae-2f2b-4c10-a2bd-37b037f6fa2f",
+    "role": "customer",
+    "actorId": "vig@gmail.com",
+    "actorName": "fgfhg",
+    "timestamp": 1763717303634,
+    "isDuplicate": true,
+    "txHash": "MOCK_a99f735648e47d94"
+  },
+  {
+    "id": "8483f320-98f1-4f29-a2ae-0026038c4703",
+    "qrId": "88fa8fe4-1790-4357-9bca-bda522632d05",
+    "role": "manufacturer",
+    "actorId": "ashhar",
+    "actorName": "ashhar",
+    "timestamp": 1771686817952,
+    "location": "bangalore",
+    "isDuplicate": false,
+    "txHash": "MOCK_857031f159dd8930"
+  },
+  {
+    "id": "cfe0d6d5-a2d7-4400-ae18-675a8ad84c49",
+    "qrId": "88fa8fe4-1790-4357-9bca-bda522632d05",
+    "role": "customer",
+    "actorId": "1256725",
+    "actorName": "Ashfar",
+    "timestamp": 1771686847516,
+    "isDuplicate": false,
+    "txHash": "MOCK_1a0b7845023489ee"
+  },
+  {
+    "id": "a7c3a019-8d8f-4dbb-9928-1f29fb053b51",
+    "qrId": "88fa8fe4-1790-4357-9bca-bda522632d05",
+    "role": "customer",
+    "actorId": "23363",
+    "actorName": "sghhwgd",
+    "timestamp": 1771686893441,
+    "isDuplicate": true,
+    "txHash": "MOCK_05a19bbe47509a85"
+  }
+]

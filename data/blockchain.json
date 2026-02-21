@@ -1,1 +1,114 @@
-[]
+[
+  {
+    "id": "c020aa71-56d8-4897-86ef-d99c6a2146fb",
+    "qrId": "af4cc1ae-2f2b-4c10-a2bd-37b037f6fa2f",
+    "eventType": "SCAN",
+    "metadata": {
+      "role": "manufacturer",
+      "actorId": "67YH",
+      "actorName": "uday",
+      "location": "us",
+      "isDuplicate": false
+    },
+    "txHash": "MOCK_ee15b64911a29c61",
+    "blockNumber": 0,
+    "timestamp": 1763717035360
+  },
+  {
+    "id": "4c4898f8-85a6-40ac-b62f-b0edfbd3c4e0",
+    "qrId": "af4cc1ae-2f2b-4c10-a2bd-37b037f6fa2f",
+    "eventType": "SCAN",
+    "metadata": {
+      "role": "distributor",
+      "actorId": "HU&",
+      "actorName": "shar",
+      "location": "India",
+      "isDuplicate": false
+    },
+    "txHash": "MOCK_7e4db178dd4b2fd5",
+    "blockNumber": 0,
+    "timestamp": 1763717194878
+  },
+  {
+    "id": "056b661e-ab1f-4c71-908d-f55bb584e733",
+    "qrId": "af4cc1ae-2f2b-4c10-a2bd-37b037f6fa2f",
+    "eventType": "SCAN",
+    "metadata": {
+      "role": "retailer",
+      "actorId": "JOVGVg7",
+      "actorName": "adh",
+      "location": "bangalore",
+      "isDuplicate": false
+    },
+    "txHash": "MOCK_d6781ee381e55067",
+    "blockNumber": 0,
+    "timestamp": 1763717217869
+  },
+  {
+    "id": "5f241734-833f-45de-8f95-622cafa53c5d",
+    "qrId": "af4cc1ae-2f2b-4c10-a2bd-37b037f6fa2f",
+    "eventType": "CLAIM",
+    "metadata": {
+      "actorId": "vig@gmail.com",
+      "actorName": "Vignesh",
+      "isDuplicate": false
+    },
+    "txHash": "MOCK_eb9853bd8eca1670",
+    "blockNumber": 0,
+    "timestamp": 1763717252812
+  },
+  {
+    "id": "a4b263f2-c6e5-4bbd-927c-b12fe918a76d",
+    "qrId": "af4cc1ae-2f2b-4c10-a2bd-37b037f6fa2f",
+    "eventType": "CLAIM_DUPLICATE",
+    "metadata": {
+      "actorId": "vig@gmail.com",
+      "actorName": "fgfhg",
+      "isDuplicate": true
+    },
+    "txHash": "MOCK_a99f735648e47d94",
+    "blockNumber": 0,
+    "timestamp": 1763717303634
+  },
+  {
+    "id": "1c28989d-6f8a-454c-a947-e6f69aa4d0f7",
+    "qrId": "88fa8fe4-1790-4357-9bca-bda522632d05",
+    "eventType": "SCAN",
+    "metadata": {
+      "role": "manufacturer",
+      "actorId": "ashhar",
+      "actorName": "ashhar",
+      "location": "bangalore",
+      "isDuplicate": false
+    },
+    "txHash": "MOCK_857031f159dd8930",
+    "blockNumber": 0,
+    "timestamp": 1771686817962
+  },
+  {
+    "id": "4355151a-e660-4926-ba18-77f448e1ece6",
+    "qrId": "88fa8fe4-1790-4357-9bca-bda522632d05",
+    "eventType": "CLAIM",
+    "metadata": {
+      "actorId": "1256725",
+      "actorName": "Ashfar",
+      "isDuplicate": false
+    },
+    "txHash": "MOCK_1a0b7845023489ee",
+    "blockNumber": 0,
+    "timestamp": 1771686847522
+  },
+  {
+    "id": "d4efa365-5ec1-4ce5-8db6-4aab691ae9b2",
+    "qrId": "88fa8fe4-1790-4357-9bca-bda522632d05",
+    "eventType": "CLAIM_DUPLICATE",
+    "metadata": {
+      "actorId": "23363",
+      "actorName": "sghhwgd",
+      "isDuplicate": true
+    },
+    "txHash": "MOCK_05a19bbe47509a85",
+    "blockNumber": 0,
+    "timestamp": 1771686893441
+  }
+]

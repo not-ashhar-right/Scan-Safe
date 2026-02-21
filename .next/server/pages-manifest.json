@@ -2,10 +2,11 @@
   "/_app": "pages/_app.js",
   "/_error": "pages/_error.js",
   "/_document": "pages/_document.js",
+  "/manufacturer": "pages/manufacturer.js",
   "/scan": "pages/scan.js",
+  "/api/claim": "pages/api/claim.js",
+  "/customer": "pages/customer.js",
   "/": "pages/index.js",
-  "/api/qr/generate": "pages/api/qr/generate.js",
-  "/api/qrs": "pages/api/qrs.js",
   "/api/products": "pages/api/products.js",
-  "/customer": "pages/customer.js"
+  "/admin": "pages/admin.js"
 }

@@ -14,6 +14,12 @@ interface QRCodeRecord {
   };
 }
 
+interface ProductSummary {
+  id: string;
+  name: string;
+  sku: string;
+}
+
 interface ScanRecord {
   id: string;
   qrId: string;
@@ -29,6 +35,8 @@ interface ScanRecord {
 
 export default function AdminPage() {
   const [qrs, setQrs] = useState<QRCodeRecord[]>([]);
+  const [products, setProducts] = useState<ProductSummary[]>([]);
+  const [selectedProductId, setSelectedProductId] = useState<string>('');
   const [selectedQrId, setSelectedQrId] = useState<string | null>(null);
   const [scans, setScans] = useState<ScanRecord[]>([]);
   const [loading, setLoading] = useState(false);
@@ -47,6 +55,22 @@ export default function AdminPage() {
         // ignore
       });
   }, []);
+
+  useEffect(() => {
+    fetch('/api/products')
+      .then((r) => r.json())
+      .then((data: ProductSummary[]) => setProducts(data))
+      .catch(() => {
+        // ignore
+      });
+  }, []);
+
+  useEffect(() => {
+    if (!selectedProductId && products.length > 0 && qrs.length > 0) {
+      const withQr = products.find((p) => qrs.some((qr) => qr.productId === p.id));
+      setSelectedProductId((withQr || products[0]).id);
+    }
+  }, [products, qrs, selectedProductId]);
 
   const loadScans = async (qrId: string) => {
     setSelectedQrId(qrId);
@@ -70,6 +94,16 @@ export default function AdminPage() {
       .filter((s) => s.qrId === qrId && s.anomalyScore)
       .reduce((sum, s) => sum + (s.anomalyScore || 0), 0);
   };
+
+  const productNameFor = (productId?: string) => {
+    if (!productId) return '-';
+    const p = products.find((x) => x.id === productId);
+    return p ? `${p.name} (${p.sku})` : productId;
+  };
+
+  const filteredQrs = selectedProductId
+    ? qrs.filter((qr) => qr.productId === selectedProductId)
+    : qrs;
 
   const onCreateProduct = async (e: FormEvent) => {
     e.preventDefault();
@@ -156,6 +190,24 @@ export default function AdminPage() {
       <div className="page-grid">
         <div className="card">
           <h2>QR Codes Overview</h2>
+          <div className="flex items-center justify-between mb-4" style={{ gap: 12 }}>
+            <p style={{ fontSize: 14, color: 'var(--text-secondary)' }}>Filter by product</p>
+            <select
+              className="select"
+              value={selectedProductId}
+              onChange={(e) => {
+                const value = e.target.value;
+                setSelectedProductId(value);
+                setSelectedQrId(null);
+                setScans([]);
+              }}
+            >
+              <option value="">All products</option>
+              {products.map((p) => (
+                <option key={p.id} value={p.id}>{`${p.name} (${p.sku})`}</option>
+              ))}
+            </select>
+          </div>
           <div style={{ overflowX: 'auto' }}>
             <table className="table">
               <thead>
@@ -170,7 +222,7 @@ export default function AdminPage() {
                 </tr>
               </thead>
               <tbody>
-                {qrs.map((qr) => {
+                {filteredQrs.map((qr) => {
                   const flags: string[] = [];
                   if (hasDuplicate(qr.id)) flags.push('Duplicate');
                   const anomaly = anomalyScoreFor(qr.id);
@@ -179,7 +231,7 @@ export default function AdminPage() {
                     <tr key={qr.id}>
                       <td style={{ maxWidth: 120, wordBreak: 'break-all' }}>{qr.id}</td>
                       <td>{qr.batchId}</td>
-                      <td>{qr.productId || '-'}</td>
+                      <td>{productNameFor(qr.productId)}</td>
                       <td>{qr.scannedCount}</td>
                       <td>
                         {qr.states.manufactured && <span className="badge badge-success">M</span>}{' '}
